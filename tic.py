@@ -37,11 +37,11 @@ def play_game():
         move = int(move) - 1
         row, column = divmod(move, 3)
 
-        if board[row][col] in ['X', 'O']:
+        if board[row][column] in ['X', 'O']:
             print("Cell already taken. Try again.")
             continue
 
-        board[row][col] = current_player
+        board[row][column] = current_player
 
         if check_winner(board, current_player):
             print_board(board)
